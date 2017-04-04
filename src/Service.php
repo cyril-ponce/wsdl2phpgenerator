@@ -145,7 +145,7 @@ class Service implements ClassGenerator
         $name = Validator::validateClass($name, $this->config->get('namespaceName'));
 
         // uppercase the name
-        $name = ucfirst($name);
+        $name = ucfirst($name) . 'Service';
 
         // Create the class object
         $comment = new PhpDocComment($this->description);
